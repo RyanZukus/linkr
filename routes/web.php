@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/{slug}', function ($slug) {
+
+    // TODO: Invoke appropriate redirect
+    return print_r($slug,true);
+
+})->where('slug', '[_A-Za-z0-9\-]+');
